@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name:inline if 
+# key: inif
+# --
+
+if (${1:cond}) ${2:expression}; 
+$0
