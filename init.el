@@ -117,6 +117,9 @@
 
 (use-package hide-mode-line)
 
+;; You might be wondering: why is there this giant bloody commented out section under flycheck? Well, let me tell you a story.
+;; See once upon a time there was this guy named Jack. He was interested in GNU emacs, yet somehow and no one was sure quite how, his config was simply cursed.
+;; Unwisely part of his config was copied below to configure fly check and yes, it somehow managed to break treemacs icons. So no more, it shall be expelled.
 (use-package flycheck
   :init
   (global-flycheck-mode))
