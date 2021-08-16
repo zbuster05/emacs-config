@@ -299,5 +299,5 @@
   (setq counsel-describe-function-function #'helpful-callable)
   (setq counsel-describe-variable-function #'helpful-variable))
 
-
+(setq cursor-in-non-selected-windows nil)
 ;;; init.el ends here
