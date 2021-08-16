@@ -1,6 +1,7 @@
 ;; WISHLIST
 ;; Perspectives
 ;; Better scrolling
+;; Get rid of hollow cursor in unfocused splits
 ;; Consider using General for keybindings (hjkl=jkl;, capslock+jkl=C-x o;)
 
 (require 'package)
@@ -15,7 +16,7 @@
  '(custom-safe-themes
    '("745d03d647c4b118f671c49214420639cb3af7152e81f132478ed1c649d4597d" "cf922a7a5c514fad79c483048257c5d8f242b21987af0db813d3f0b138dfaf53" "266ecb1511fa3513ed7992e6cd461756a895dcc5fef2d378f165fed1c894a78c" "8d7b028e7b7843ae00498f68fad28f3c6258eda0650fe7e17bfb017d51d0e2a2" "1704976a1797342a1b4ea7a75bdbb3be1569f4619134341bd5a4c1cfb16abad4" "f6665ce2f7f56c5ed5d91ed5e7f6acb66ce44d0ef4acfaa3a42c7cfe9e9a9013" "5784d048e5a985627520beb8a101561b502a191b52fa401139f4dd20acb07607" "2c613514f52fb56d34d00cc074fe6b5f4769b4b7f0cc12d22787808addcef12c" "3325e2c49c8cc81a8cc94b0d57f1975e6562858db5de840b03338529c64f58d1" "3d54650e34fa27561eb81fc3ceed504970cc553cfd37f46e8a80ec32254a3ec3" "1a52e224f2e09af1084db19333eb817c23bceab5e742bf93caacbfea5de6b4f6" "22a514f7051c7eac7f07112a217772f704531b136f00e2ccfaa2e2a456558d39" "21055a064d6d673f666baaed35a69519841134829982cbbb76960575f43424db" "d47f868fd34613bd1fc11721fe055f26fd163426a299d45ce69bef1f109e1e71" "1d5e33500bc9548f800f9e248b57d1b2a9ecde79cb40c0b1398dec51ee820daf" "850bb46cc41d8a28669f78b98db04a46053eca663db71a001b40288a9b36796c" "a0be7a38e2de974d1598cf247f607d5c1841dbcef1ccd97cded8bea95a7c7639" "7a7b1d475b42c1a0b61f3b1d1225dd249ffa1abb1b7f726aec59ac7ca3bf4dae" "9f9fc38446c384a4e909b7220d15bf0c152849ef42f5b1b97356448612c77953" "b7e460a67bcb6cac0a6aadfdc99bdf8bbfca1393da535d4e8945df0648fa95fb" "818f548654c0877317aa042d0fbcab4dd218fd9a2be564fa9424db6fd6a13716" "6c386d159853b0ee6695b45e64f598ed45bd67c47f671f69100817d7db64724d" default))
  '(package-selected-packages
-   '(helpful which-key no-littering projectile magit-todos dockerfile-mode ayu-theme zygospore hide-mode-line vterm magit yasnippet ccls treemacs-all-the-icons treemacs company lsp-mode flycheck counsel counsel-mode marginalia ivy-prescient prescient all-the-icons-ivy-rich ivy-rich swiper ivy solaire-mode centaur-tabs doom-modeline doom-themes evil-collection evil use-package)))
+   '(docker-file-mode helpful which-key no-littering projectile magit-todos dockerfile-mode ayu-theme zygospore hide-mode-line vterm magit yasnippet ccls treemacs-all-the-icons treemacs company lsp-mode flycheck counsel counsel-mode marginalia ivy-prescient prescient all-the-icons-ivy-rich ivy-rich swiper ivy solaire-mode centaur-tabs doom-modeline doom-themes evil-collection evil use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -299,5 +300,9 @@
   (setq counsel-describe-function-function #'helpful-callable)
   (setq counsel-describe-variable-function #'helpful-variable))
 
+;; DEBUG Get rid of cursor in non-selected windows
 (setq cursor-in-non-selected-windows nil)
+
+(use-package dockerfile-mode)
+
 ;;; init.el ends here
