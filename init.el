@@ -4,6 +4,9 @@
 ;; Get rid of hollow cursor in unfocused splits
 ;; Consider using General for keybindings (hjkl=jkl;, capslock+jkl=C-x o;)
 ;; fix lsp mode for python
+;; better snippets
+;; better in-editor compiling
+;; interactive coding
 
 (require 'package)
 (add-to-list 'package-archives
