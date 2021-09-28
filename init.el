@@ -6,7 +6,9 @@
 ;; fix lsp mode for python
 ;; better dired
 ;; learn dired
-
+;; better snippets
+;; better in-editor compiling
+;; interactive coding
 
 (require 'package)
 (add-to-list 'package-archives
