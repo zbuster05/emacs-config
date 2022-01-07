@@ -345,4 +345,5 @@
   ;;:hook
   ;;(rust-mode . (lambda () (setq indent-tabs-mode nil))))
 (setq create-lockfiles nil)
+(setq backup-directory-alist '(("". "~/.emacs.d/backup")))
 ;;; init.el ends here
