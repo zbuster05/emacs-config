@@ -1,7 +1,7 @@
 ;; WISHLIST
 ;; Perspectives
 ;; Better scrolling
-;; Get rid of hollow cursor in unfocused splits
+;; - In specific write code to set a mark when scrolling past window and then jump back on any key press
 ;; Consider using General for keybindings (hjkl=jkl;, capslock+jkl=C-x o;)
 ;; fix lsp mode for python
 ;; better dired
@@ -344,6 +344,10 @@
 (use-package rust-mode)
   ;;:hook
   ;;(rust-mode . (lambda () (setq indent-tabs-mode nil))))
+
+;; Hide cursor in unfocused windows
+(setq cursor-in-non-selected-windows nil)
+
+;; The holy war against littering
 (setq create-lockfiles nil)
-(setq backup-directory-alist '(("". "~/.emacs.d/backup")))
 ;;; init.el ends here
